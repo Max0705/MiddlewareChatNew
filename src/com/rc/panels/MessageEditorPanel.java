@@ -39,6 +39,8 @@ public class MessageEditorPanel extends ParentAvailablePanel
     private ImageIcon cutNormalIcon;
     private ImageIcon cutActiveIcon;
 
+    private JComboBox translate;
+    private String[] language = {"中文","英语","粤语","文言文","日语","韩语","法语","西班牙语"};
     private ExpressionPopup expressionPopup;
 
     public MessageEditorPanel(JPanel parent)
@@ -107,6 +109,10 @@ public class MessageEditorPanel extends ParentAvailablePanel
             cutLabel.setToolTipText("截图(当前系统下不支持全局热键)");
         }
 
+        translate = new JComboBox(language);
+        translate.setEditable(true);
+        translate.getEditor().getEditorComponent().setBackground(Colors.LIGHT_GRAY);
+        translate.setBackground(Colors.LIGHT_GRAY);
 
         textEditor = new RCTextEditor();
         textEditor.setBackground(Colors.WINDOW_BACKGROUND);
@@ -140,6 +146,7 @@ public class MessageEditorPanel extends ParentAvailablePanel
         controlLabel.add(expressionLabel);
         controlLabel.add(fileLabel);
         controlLabel.add(cutLabel);
+        controlLabel.add(translate);
 
         add(controlLabel, new GBC(0, 0).setFill(GBC.HORIZONTAL).setWeight(1, 1));
         add(textScrollPane, new GBC(0, 1).setFill(GBC.BOTH).setWeight(1, 15));

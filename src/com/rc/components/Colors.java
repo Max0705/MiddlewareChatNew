@@ -28,7 +28,7 @@ public class Colors
     public static Color DIALOG_BORDER = new Color(204, 204, 204);
     public static Color PROGRESS_BAR_START = new Color(178, 226, 129);
     public static Color PROGRESS_BAR_END = new Color(133, 194, 97);
-    public static Color MAIN_COLOR = new Color(128, 128, 128);
-    public static Color MAIN_COLOR_DARKER = new Color(121, 136, 139);
+    public static Color MAIN_COLOR = new Color(121, 136, 139);
+    public static Color MAIN_COLOR_DARKER = new Color(106, 105, 129);
     public static final Color SCROLL_BAR_THUMB = new Color(122, 122, 122);
 }
